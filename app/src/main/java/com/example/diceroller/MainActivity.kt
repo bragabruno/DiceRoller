@@ -36,11 +36,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice() {
+        // findViewById to get a reference to the TextView and assign
+        // it to an immutable variable called resultText:
         val resultText: TextView = findViewById(R.id.result_text)
 
+        // have the rollDice method to get a random number between 1 and 6:
         val randomInt = Random().nextInt(6)+1
 
         // .text = SetText method from TextView class
+        // set the random value that you got above as the text of the TextView:
         resultText.text = randomInt.toString()
     }
 }
